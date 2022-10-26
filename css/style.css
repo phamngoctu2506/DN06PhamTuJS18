@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header_bg{
+    background: rgba(151, 233, 229, 0.397);
+}
+.btn_bg{
+    background-color: beige;
+}
+
+.drowdown_bg{
+    background-color: #9bd7d0;
+}
+.bg_ketqua{
+    background: #57dd77;
+}
