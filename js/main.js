@@ -59,8 +59,6 @@ function timSoDuongNho() {
             document.querySelector('#ketQua4').innerHTML = "Không có số dương"
         }
     }
-    console.log(numArray[i]);
-    console.log(tapHopSoDuong);
     document.querySelector('#ketQua4').innerHTML = tapHopSoDuong;
 }
 
@@ -81,18 +79,16 @@ function timSoChanCuoi() {
 
 function doiCho() {
     var numCopy = [];
-    var viTri
-    for (var i = 0; i < numArray.length - 1; i++) {
+    for (var i = 0; i < numArray.length; i++) {
         numCopy.push(numArray[i]);
     }
+    var viTri1 = Number(document.querySelector('#num4').value);
+    var viTri2 = Number(document.querySelector('#num5').value);
     for (var i = 0; i < numCopy.length - 1; i++) {
-        for (var j = 0; j < numCopy.length; j++) {
-            var temp = numCopy[j];
-            numCopy[j] = numCopy[j + 1];
-            numCopy[j + 1] = temp;
-        }
+        var thayThe = numCopy[viTri1];
+        numCopy[viTri1] = numCopy[viTri2];
+        numCopy[viTri2] = thayThe;
     }
-    console.log(numCopy);
     document.querySelector("#ketQua6").innerHTML = numCopy;
 }
 
@@ -116,33 +112,52 @@ function sapXepTang() {
     document.querySelector("#ketQua7").innerHTML = diemCopy;
 }
 
-// //! bài 8 tìm số nguyên tố đầu tiên
 
-// function timNguyenTo() {
-//     var soNguyen = 0;
-//     for (var i = 0; i < numArray.length; i++) {
-//         if (numArray[i] % i == 0) {
-//             soNguyen += 1;
-//             if (soNguyen == 2) {
-//                 console.log(soNguyen);
-//                 break;
-//             }
-//         }
-//     }
-// }
+
+
+
+
+
+
+
+//! bài 8 tìm số nguyên tố đầu tiên
+
+function timNguyenTo() {
+    var soN = 0;
+    var soNguyenDauTien = [];
+    for (var i = 0; i < numArray.length; i++) {
+        if (numArray[i] / numArray[i] == 1 && numArray[i] > 1) {
+            soNguyenDauTien = numArray[i];
+        }
+        soN = numArray[0];
+    }
+    console.log(numArray[0]);
+    console.log(soNguyenDauTien);
+    document.querySelector("#ketQua8").innerHTML = soNguyenDauTien;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //! bài 9: Đếm số nguyên
 function demSoNguyen() {
     var tongSoNguyen = 0;
     for (var i = 0; i < numArray.length; i++) {
-        if (numArray[i] % 1 == 0 ||numArray[i] % -1 == 0 || numArray[i] == 0) {
+        if (numArray[i] % 1 == 0 || numArray[i] % -1 == 0 || numArray[i] == 0) {
             tongSoNguyen += 1;
         } else {
         }
     }
     document.querySelector("#ketQua9").innerHTML = tongSoNguyen;
 }
-
 
 //! bài 10: so sánh số âm và dương
 function soSanh() {
