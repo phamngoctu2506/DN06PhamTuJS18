@@ -30,7 +30,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Tính Tổng các số dương</p>
-                    <button type="button" onclick="TongSoDuong()" class="btn btn-primary rounded-pill mt-3">Tính Tổng</button>
+                    <button type="button" onclick="tongSoDuong()" class="btn btn-primary rounded-pill mt-3">Tính Tổng</button>
                     <div id="ketQua1" class="mt-2 alert bg_ketqua">
                         Tổng Số Dương :
                         <span id="ketQua1"></span>
@@ -46,7 +46,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Đếm có bao nhiêu số dương</p>
-                    <button type="button" onclick="DemSoDuong()" class="btn btn-primary rounded-pill mt-3">Đếm Số</button>
+                    <button type="button" onclick="demSoDuong()" class="btn btn-primary rounded-pill mt-3">Đếm Số</button>
                     <div id="ketQua2" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua2"></span>
@@ -62,7 +62,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Tìm Số nhỏ nhất</p>
-                    <button type="button" onclick="TimSoNhoNhat()" class="btn btn-primary rounded-pill mt-3">Tìm Số</button>
+                    <button type="button" onclick="timSoNhoNhat()" class="btn btn-primary rounded-pill mt-3">Tìm Số</button>
                     <div id="ketQua3" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua3"></span>
@@ -78,7 +78,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Tìm số dương nhỏ nhất</p>
-                    <button type="button" onclick="TimSoDuongNho()" class="btn btn-primary rounded-pill mt-3">Tìm Số</button>
+                    <button type="button" onclick="timSoDuongNho()" class="btn btn-primary rounded-pill mt-3">Tìm Số</button>
                     <div id="ketQua4" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua4"></span>
@@ -94,7 +94,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Tìm số chẳn cuối cùng</p>
-                    <button type="button" onclick="TimSoChan()" class="btn btn-primary rounded-pill mt-3">Tìm Số</button>
+                    <button type="button" onclick="timSoChanCuoi()" class="btn btn-primary rounded-pill mt-3">Tìm Số</button>
                     <div id="ketQua5" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua5"></span>
@@ -112,7 +112,7 @@
                     <p>Đổi Chỗ</p>
                     <input class="form-control w-50" type="number" id="num4" placeholder="Nhập số vị trí 1">
                     <input class="form-control w-50 mt-3" type="number" id="num5" placeholder="Nhập số vị trí 2">
-                    <button type="button" onclick="DoiCho()" class="btn btn-primary rounded-pill mt-3">Đổi vị trí</button>
+                    <button type="button" onclick="doiCho()" class="btn btn-primary rounded-pill mt-3">Đổi vị trí</button>
                     <div id="ketQua6" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua6"></span>
@@ -128,7 +128,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Sắp xếp tăng dần</p>
-                    <button type="button" onclick="SapXepTang()" class="btn btn-primary rounded-pill mt-3">Sắp Xếp</button>
+                    <button type="button" onclick="sapXepTang()" class="btn btn-primary rounded-pill mt-3">Sắp Xếp</button>
                     <div id="ketQua7" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua7"></span>
@@ -144,7 +144,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Tìm số nguyên tố đầu tiên</p>
-                    <button type="button" onclick="TimNguyenTo()" class="btn btn-primary rounded-pill mt-3">Tìm Số Nguyên Tố</button>
+                    <button type="button" onclick="timNguyenTo()" class="btn btn-primary rounded-pill mt-3">Tìm Số Nguyên Tố</button>
                     <div id="ketQua8" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua8"></span>
@@ -160,8 +160,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>Đếm số nguyên</p>
-                    <input class="form-control w-25" type="number" id="num9" placeholder="Nhập số">
-                    <button type="button" onclick="DemSoNguyen()" class="btn btn-primary rounded-pill mt-3">Đếm</button>
+                    <button type="button" onclick="demSoNguyen()" class="btn btn-primary rounded-pill mt-3">Đếm</button>
                     <div id="ketQua9" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua9"></span>
@@ -177,7 +176,7 @@
             <div class="dropdown-menu w-100 drowdown_bg">
                 <form class="p-5">
                     <p>So sánh số lượng âm và dương</p>
-                    <button type="button" onclick="SoSanh()" class="btn btn-primary rounded-pill mt-3">So Sánh</button>
+                    <button type="button" onclick="soSanh()" class="btn btn-primary rounded-pill mt-3">So Sánh</button>
                     <div id="ketQua10" class="mt-2 alert bg_ketqua">
                         Kết Quả :
                         <span id="ketQua10"></span>
