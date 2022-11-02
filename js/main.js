@@ -113,39 +113,31 @@ function sapXepTang() {
 }
 
 
-
-
-
-
-
-
-
 //! bài 8 tìm số nguyên tố đầu tiên
 
-function timNguyenTo() {
-    var soN = 0;
-    var soNguyenDauTien = [];
-    for (var i = 0; i < numArray.length; i++) {
-        if (numArray[i] / numArray[i] == 1 && numArray[i] > 1) {
-            soNguyenDauTien = numArray[i];
+function soNguyenTo(soNguyen){
+    var dem = 0;
+    for (var i = 0; i <= soNguyen; i++){
+        if (soNguyen % i === 0){
+            dem++;
         }
-        soN = numArray[0];
     }
-    console.log(numArray[0]);
-    console.log(soNguyenDauTien);
-    document.querySelector("#ketQua8").innerHTML = soNguyenDauTien;
+    if (dem === 2){ 
+        return true;
+    }else{
+        return false;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
+function timNguyenTo() {
+    for (var i = 0; i < numArray.length; i++){
+        var soNT = soNguyenTo(numArray[i]);
+        if (soNT){
+            document.querySelector("#ketQua8").innerHTML = (numArray[i] + " là số nguyên tố đầu tiên");
+            break;
+        }
+    }
+}
 
 //! bài 9: Đếm số nguyên
 function demSoNguyen() {
