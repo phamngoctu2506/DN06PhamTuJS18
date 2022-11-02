@@ -84,11 +84,9 @@ function doiCho() {
     }
     var viTri1 = Number(document.querySelector('#num4').value);
     var viTri2 = Number(document.querySelector('#num5').value);
-    for (var i = 0; i < numCopy.length - 1; i++) {
-        var thayThe = numCopy[viTri1];
-        numCopy[viTri1] = numCopy[viTri2];
-        numCopy[viTri2] = thayThe;
-    }
+    var temp = numCopy[viTri1];
+    numCopy[viTri1] = numCopy[viTri2];
+    numCopy[viTri2] = temp;
     document.querySelector("#ketQua6").innerHTML = numCopy;
 }
 
@@ -108,31 +106,30 @@ function sapXepTang() {
             }
         }
     }
-    console.log(diemCopy);
     document.querySelector("#ketQua7").innerHTML = diemCopy;
 }
 
 
 //! bài 8 tìm số nguyên tố đầu tiên
 
-function soNguyenTo(soNguyen){
+function soNguyenTo(soNguyen) {
     var dem = 0;
-    for (var i = 0; i <= soNguyen; i++){
-        if (soNguyen % i === 0){
+    for (var i = 0; i <= soNguyen; i++) {
+        if (soNguyen % i === 0) {
             dem++;
         }
     }
-    if (dem === 2){ 
+    if (dem === 2) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
 function timNguyenTo() {
-    for (var i = 0; i < numArray.length; i++){
+    for (var i = 0; i < numArray.length; i++) {
         var soNT = soNguyenTo(numArray[i]);
-        if (soNT){
+        if (soNT) {
             document.querySelector("#ketQua8").innerHTML = (numArray[i] + " là số nguyên tố đầu tiên");
             break;
         }
